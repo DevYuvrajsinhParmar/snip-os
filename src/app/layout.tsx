@@ -23,10 +23,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full", jetbrainsMono.variable)}
+      className={cn(jetbrainsMono.variable)}
       suppressHydrationWarning
     >
-      <body className={cn("min-h-full flex flex-col", "font-mono antialiased")}>
+      <body
+        className={cn("flex min-h-screen flex-col", "font-mono antialiased")}
+      >
         <ThemeProviders>{children}</ThemeProviders>
       </body>
     </html>
