@@ -17,29 +17,22 @@ import GoogleLogo from "@/app/assets/images/google-g-logo.svg";
 import GithubLogoWhite from "@/app/assets/images/github-logo-white.svg";
 import GithubLogoBlack from "@/app/assets/images/github-logo-black.svg";
 
-export default function Register() {
+export default function Login() {
   return (
     <Card className="w-full max-w-md gap-8">
       <CardHeader className="text-center">
-        <CardTitle className="text-primary text-2xl">Snip - OS</CardTitle>
-        <CardDescription>The Developer&apos;s Everything Vault</CardDescription>
-        <CardTitle className="text-xl">Create Account</CardTitle>
+        <CardTitle className="text-2xl">Welcome Back!</CardTitle>
+        <CardDescription>Sign it to your vault</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-col gap-6">
         <div className="flex flex-col gap-4">
-          <CustomInput label="Full Name" placeholder="Linus Torvald" required />
           <CustomInput
             label="Email Address"
             placeholder="linustorvald@example.com"
             required
           />
           <CustomInput label="Password" placeholder="••••••••" required />
-          <CustomInput
-            label="Confirm Password"
-            placeholder="••••••••"
-            required
-          />
-          <Button>Create Account</Button>
+          <Button>Sign In</Button>
         </div>
         <div className="flex items-center gap-4">
           <Separator className="flex-1" />
@@ -75,16 +68,11 @@ export default function Register() {
             Google
           </Button>
         </div>
-        <div className="text-muted-foreground text-center">
-          By creating an account you agree to our{" "}
-          <Button variant={"link"}>Terms of Service</Button> and{" "}
-          <Button variant={"link"}>Privacy Policy</Button>
-        </div>
       </CardContent>
       <CardFooter className="justify-center">
-        Already have an account?
-        <Link href={"/login"}>
-          <Button variant={"link"}>Sign In</Button>
+        Don&apos;t have an account?
+        <Link href={"/register"}>
+          <Button variant={"link"}>Sign Up</Button>
         </Link>
       </CardFooter>
     </Card>
