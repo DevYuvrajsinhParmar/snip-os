@@ -3,6 +3,7 @@ import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProviders } from "@/components/shared/theme-providers";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -29,7 +30,9 @@ export default function RootLayout({
       <body
         className={cn("flex min-h-screen flex-col", "font-mono antialiased")}
       >
-        <ThemeProviders>{children}</ThemeProviders>
+        <ThemeProviders>
+          <TooltipProvider>{children}</TooltipProvider>
+        </ThemeProviders>
       </body>
     </html>
   );
